@@ -1,10 +1,10 @@
-name = "proofstep"
+name = "Proofstep"
 version = "0.1.0"
-defaultTargets = ["proofstep"]
+defaultTargets = ["Proofstep"]
 
 [[lean_lib]]
 name = "Proofstep"
 
 [[lean_exe]]
-name = "proofstep"
+name = "Proofstep"
 root = "Main"

@@ -96,11 +96,11 @@ def postProcess (depth: Nat) (sameFVars : List Expr) (action: Expr) (oriAction: 
       return none
 
 -- 定义 tactic，封装 proofStep 的逻辑
-syntax (name := proofStepTactic) "proofstep " term : tactic
+syntax (name := proofStepTactic) "Proofstep " term : tactic
 
 @[tactic proofStepTactic] def evalProofStepTactic : Tactic := fun stx =>
   match stx with
-  | `(tactic| proofstep $actionExpr) => do
+  | `(tactic| Proofstep $actionExpr) => do
     -- 获取当前目标
     let mainGoal ← getMainGoal
     let goal ← mainGoal.getType
